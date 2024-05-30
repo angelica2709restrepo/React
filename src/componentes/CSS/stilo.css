@@ -1,0 +1,34 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+.contenido{
+    width: 300px;
+    height: auto;
+    box-shadow: 1px 1px 7px rgb(0, 0, 0);
+}
+
+.back{
+    background-color: black;
+    border-radius: 50px;
+}
+
+.font{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.logo{
+    height: 200px;
+    width: 200px;
+    margin:50px;
+    margin-left: 16%;
+    border-radius: 50%;
+    box-shadow: 2px 2px 7px rgb(255, 255, 255);
+}
+
+.jas{
+    color: rgb(0, 0, 0);
+}
