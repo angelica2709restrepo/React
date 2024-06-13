@@ -1,6 +1,7 @@
 import React from "react";
 /* import img from "../componentes/IMG/huron.jpg"; */
 import "./CSS/stilo.css";
+import gatito from "./IMG/gatito.png"
 
 
 class Card extends React.Component{
@@ -19,24 +20,22 @@ class Card extends React.Component{
         },3000)
     } */
     render(){
- 
-        const {nombre,descip,img,color} = this.props;
+        const {titulo,descripcion,img,color} = this.props;
 
         return(<div className="todo">
             
             <div className="contenido" style={{background:`${color}`}}>
                 <div className="font">
-                    <h1>Hola {nombre}</h1>
-                    <p>{descip}</p>
+                    <h1>Hola {titulo}</h1>
+                    <p>{descripcion}</p>
                 </div>
                 <div>
-                    <img src={img} className="logo" alt=""/>
+                    <img src={img || gatito} className="logo" alt=""/>
                 </div>
             </div>
 
         </div>) 
     }
-
 }
 
 export default Card

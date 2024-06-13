@@ -1,16 +1,10 @@
 body{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 249, 249);
 }
 
 .contenido{
     width: 300px;
-    height: auto;
-    box-shadow: 1px 1px 7px rgb(0, 0, 0);
-}
-
-.back{
-    background-color: black;
-    border-radius: 50px;
+    box-shadow: 10px 10px 10px rgb(227, 251, 255);
 }
 
 .font{
@@ -25,10 +19,6 @@ body{
     width: 200px;
     margin:50px;
     margin-left: 16%;
-    border-radius: 50%;
+    border-radius: 20%;
     box-shadow: 2px 2px 7px rgb(255, 255, 255);
-}
-
-.jas{
-    color: rgb(0, 0, 0);
 }

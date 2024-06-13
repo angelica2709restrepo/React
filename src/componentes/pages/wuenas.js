@@ -1,35 +1,57 @@
 import React from "react";
+import Formulario from "./formulario";
 import "../CSS/stilo.css";
+import Card from "../Card";
 
 export default class Wuenas extends React.Component{
-    state={}
-    handleChange=e=>{
-        this.setState({[e.target.name]:e.target.value})
+    state={
+        form:{
+            titulo:'',
+            descripcion:'',
+            img:''
+
+        }
     }
-    handleSubmit=e=>{
+    handleChange=e=>{
+        this.setState({
+            form:{
+                ...this.state.form,
+                [e.target.name]:e.target.value
+            }
+        })
+    }
+    handleSubmit=async e=>{
         e.preventDefault()
+        try{
+            let config={
+                method:'POST',
+                headers:{
+                    'Accept':'application/json',
+                    'Content-Type':'application/json'
+                },
+                body:JSON.stringify(this.state.form)
+            }
+            let res=await fetch('http://localhost:8000/api/info', config)
+            let json=await res.json()
+            console.log(json)
+        }
+        catch(error){
+            
+        }
         console.log(this.state)
     }
     render(){
         return(
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <div>
-                        <label>Nombre:</label>
-                        <input type="text" name="nombre" placeholder="Nombre aqui!!" onChange={this.handleChange} value={this.state.nombre}/>
-                    </div>
-                    <div>
-                        <label>Descripcion:</label>
-                        <input type="text" name="descrip" placeholder="Descipcion aqui!!" onChange={this.handleChange} value={this.state.descrip}/>
-                    </div>
-                    <div>
-                        <label>Url de la imagen:</label>
-                        <input type="url" name="urlIMG" placeholder="Imagen aqui!!" onChange={this.handleChange} value={this.state.urlIMG}/>
-                    </div>
-                    <button type="submit">Enviar</button>
-                </form>
+                <Card
+                {...this.state.form}
+                />
+            <Formulario
+            onSubmit={this.handleSubmit}
+            onChange={this.handleChange}
+            form={this.state.form}
+            />
             </div>
         )
     }
-
 }
