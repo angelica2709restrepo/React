@@ -1,11 +1,6 @@
 import React from "react";
 /* import Card from "../Card"; */
 import Hola from "../saludo"
-import huron from "../IMG/huron.jpg";
-import gatito from "../IMG/gatito.png";
-import koku from "../IMG/koku.jpg";
-import rappi from "../IMG/rappi.jpg";
-import visco from "../IMG/visco.jpg";
 import Iterador from "../iterante"
 import Boton from "../boton";
 
@@ -26,7 +21,7 @@ export default class Maestro extends React.Component{
         }
     render(){
         return(
-            <div>
+            <React.Fragment>
                  <Hola
                     username = "Angelica"
                 />
@@ -35,7 +30,7 @@ export default class Maestro extends React.Component{
                 />
                 <Boton 
                 />
-            </div>
+            </React.Fragment>
         )
     }
 }

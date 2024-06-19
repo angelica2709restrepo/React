@@ -1,24 +1,81 @@
-body{
-    background-color: rgb(255, 249, 249);
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: #cfb5b5;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.contenido{
+
+.tarjeta {
     width: 300px;
-    box-shadow: 10px 10px 10px rgb(227, 251, 255);
+    background-color: #fffdfd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 10);
 }
 
 .font{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
+    margin-left: 50%;
     text-align: center;
-    color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+    color: #333;
 }
 
-.logo{
-    height: 200px;
-    width: 200px;
-    margin:50px;
-    margin-left: 16%;
-    border-radius: 20%;
-    box-shadow: 2px 2px 7px rgb(255, 255, 255);
+.logo {
+    width: 20%;
+    height: 20%;
+    border-radius: 50px;
+    margin-top: 40px;
+    margin-bottom: 5%;
+    margin-left: 35%;
 }
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.formulario {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 20);
+}
+
+.formulario input[type="text"],
+.formulario button {
+    width: 97%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formulario button {
+    background-color: #1c8a60;
+    margin-left: 2%;
+    color: #fff;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background-color: #0c412d;
+}
+
+.formulario input[type="text"]::placeholder {
+    color: #ccc;
+}
+
+.formulario input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+

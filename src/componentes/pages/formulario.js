@@ -1,11 +1,12 @@
 import React from "react";
+import "../CSS/stilo.css";
 
 export default class Formulario extends React.Component{
     render(){
         const {onChange,form,onSubmit}=this.props
         return(
-            <div>
-                <form onSubmit={onSubmit}>
+            <React.Fragment className="contenedor">
+                <form className="formulario" onSubmit={onSubmit}>
                     <input 
                     type="text" 
                     name="titulo" 
@@ -32,7 +33,7 @@ export default class Formulario extends React.Component{
                     <br></br>
                     <button type="submit">Enviar</button>
                 </form>
-            </div>
+            </React.Fragment>
         )
     }
 }

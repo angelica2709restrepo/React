@@ -1,40 +1,25 @@
 import React from "react";
-/* import img from "../componentes/IMG/huron.jpg"; */
 import "./CSS/stilo.css";
 import gatito from "./IMG/gatito.png"
 
 
 class Card extends React.Component{
-    /* constructor(props){
-        super(props)
-        this.state = {
-            magine: 'https://cdn.pixabay.com/photo/2020/11/15/18/31/cat-5746771_1280.png'
-        }
-    }
-
-    componentDidMount(){
-        setTimeout(()=>{
-            this.setState({
-                magine: img
-            })
-        },3000)
-    } */
     render(){
         const {titulo,descripcion,img,color} = this.props;
 
-        return(<div className="todo">
+        return(<React.Fragment className="tarjeta">
             
-            <div className="contenido" style={{background:`${color}`}}>
-                <div className="font">
+            <React.Fragment className="contenido" style={{background:`${color}`}}>
+                <React.Fragment className="font">
                     <h1>Hola {titulo}</h1>
                     <p>{descripcion}</p>
-                </div>
-                <div>
+                </React.Fragment>
+                <React.Fragment>
                     <img src={img || gatito} className="logo" alt=""/>
-                </div>
-            </div>
+                </React.Fragment>
+            </React.Fragment>
 
-        </div>) 
+        </React.Fragment>) 
     }
 }
 
