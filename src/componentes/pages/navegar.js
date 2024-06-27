@@ -1,9 +1,9 @@
 import React from "react";
-import Wuenas from "./wuenas";
 import { useNavigate } from "react-router-dom";
+import Contenedor from "./contenedor";
 
 const Navegar=()=>{
     const navigate=useNavigate()
-    return <Wuenas navigate={navigate}/>
+    return <Contenedor navigate={navigate}/>
 }
 export default Navegar

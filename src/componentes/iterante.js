@@ -1,22 +1,18 @@
 import React from "react";
-import Card from "./Card";
+import Card from "./card";
 
-const Iterador = ({chao})=>(
-    <React.Fragment>
+const Iterante = ({exes})=>(
+    <div>
         {
-            chao.map((chao)=>{
-                return(
-                    <Card
-                        key={chao.id}
-                        titulo = {chao.titulo}
-                        descripcion = {chao.descripcion}
-                        img = {chao.img}
-                        color = {chao.color}
-                    />
-                )
-            })
-        }
-    </React.Fragment>
+        exes.map((exe)=>( 
+            <Card
+            key={exe.id}
+            {...exe}/>
+
+        )
+    )
+}
+    </div>
 )
 
-export default Iterador
+export default Iterante

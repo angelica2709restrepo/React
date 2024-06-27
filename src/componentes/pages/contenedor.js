@@ -1,9 +1,12 @@
 import React from "react";
-import Formulario from "./formulario";
 import "../CSS/stilo.css";
-import Card from "../Card";
+import Dibujar from "../Dibujar";
 
-export default class Wuenas extends React.Component{
+/* const Contenedor=()=>{
+    const[data,setData]=useState([])
+} */
+
+export default class Contenedor extends React.Component{
     state={
         form:{
             titulo:'',
@@ -34,7 +37,7 @@ export default class Wuenas extends React.Component{
             let res=await fetch('http://localhost:8000/api/info', config)
             let json=await res.json()
             console.log(json)
-            this.props.navigate('/cartas')
+            this.props.navigate('/')
         }
         catch(error){
           
@@ -43,16 +46,11 @@ export default class Wuenas extends React.Component{
     }
     render(){
         return(
-            <React.Fragment>
-                <Card
-                {...this.state.form}
-                />
-            <Formulario
-            onSubmit={this.handleSubmit}
-            onChange={this.handleChange}
+            <Dibujar
             form={this.state.form}
+            onChange={this.handleChange}
+            onSubmit={this.handleSubmit}
             />
-            </React.Fragment>
         )
     }
 }
