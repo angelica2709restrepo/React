@@ -7,9 +7,9 @@ import ContenedorComponentes from "./pages/contenerdorComponentes";
 const App = ()=>(
     <BrowserRouter>
         <Routes>
-            <Route exact path="/*" element={<Nofound/>}></Route>
-            <Route exact path="/cartas" Component={Navegar}></Route>
-            <Route exact path="/" Component={ContenedorComponentes}></Route>
+            <Route exact path="/*" component={<Nofound/>}></Route>
+            <Route exact path="/cartas" element={<Navegar/>}></Route>
+            <Route exact path="/lista" element={<ContenedorComponentes/>}></Route>
         </Routes>
     </BrowserRouter>
 )

@@ -1,18 +1,16 @@
 import React from "react";
 import Card from "./card";
 
-const Iterante = ({exes})=>(
+const Iterante = ({exe})=>(
     <div>
         {
-        exes.map((exe)=>( 
+        exe.map((exes)=>(
             <Card
-            key={exe.id}
-            {...exe}/>
-
+            key={exes.id}
+            {...exes}/>
         )
     )
 }
     </div>
 )
-
 export default Iterante

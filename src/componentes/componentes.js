@@ -4,12 +4,12 @@ import Iterante from "./iterante";
 import Boton from "./boton";
 
 const Componentes=(data)=>(
-    <React.Fragment>
+    <div>
         <Saludo
             username = "Angelica"/>
         <Iterante
-            chao={data}/>
+            exes={data}/>
         <Boton/>
-    </React.Fragment>
+    </div>
 )
 export default Componentes
