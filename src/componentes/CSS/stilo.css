@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background-color: #ddf5ff;
+}
+
+.tarjeta {
+    background-color: #fcefef;
+    margin-top: 20%;
+    padding: 10%;
+    width: 300px; /* Ancho fijo o ajusta según necesites */
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 10);
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.font {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.logo {
+    width: 200px; /* Ajusta el tamaño según necesites */
+    height: auto;
+    border-radius: 50%; /* Para hacerla redonda, si es necesario */
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Centra verticalmente en toda la pantalla */
+    padding-right: 10%;
+}
+
+.formulario {
+    width: 400px;
+    background-color: #ffffff; /* Fondo del formulario */
+    padding: 20%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 10);
+}
+
+.formulario input,
+.formulario button {
+    margin-bottom: 30px; /* Espacio entre los elementos */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 10px; /* Espacio interno */
+    font-size: 16px; /* Tamaño de fuente */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 4px; /* Borde redondeado */
+}
+
+.formulario button {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #ffffff; /* Color de texto del botón */
+    border: none; /* Quita el borde del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.formulario button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar sobre el botón */
+}
+
+
+
